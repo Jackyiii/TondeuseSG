@@ -1,11 +1,10 @@
-package com.example.sgmowltnowtest;
+package com.example.sgmowltnowtest.dao;
 
 import java.util.HashMap;
-enum Axis{
-    X,
-    Y
-}
-public class DataTondeuse {
+
+
+public class Tondeuse {
+
     private int maxX;
     private int maxY;
     private char direction;
@@ -78,7 +77,7 @@ public class DataTondeuse {
         this.direction = direction;
     }
 
-    public DataTondeuse(){
+    public Tondeuse(){
         this.maxX=0;
         this.maxY=0;
         this.direction=' ';

@@ -1,13 +1,18 @@
 package com.example.sgmowltnowtest;
 
-import org.springframework.boot.SpringApplication;
+import com.example.sgmowltnowtest.controller.TondeuseController;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//@SpringBootApplication
-//public class SgMowltNowTestApplication {
-//
-//    public static void main(String[] args) {
-//        SpringApplication.run(SgMowltNowTestApplication.class, args);
-//    }
-//
-//}
+import java.io.*;
+
+@SpringBootApplication
+public class SgMowltNowTestApplication {
+
+    public static void main(String[] args) throws IOException {
+        TondeuseController tondeuseController = new TondeuseController();
+        BufferedReader br=tondeuseController.bufferedReader("input4");
+        tondeuseController.setPositionMaxXY(br);
+        tondeuseController.operation(br);
+        System.out.println(tondeuseController.tondeuse.getResult());
+    }
+}
